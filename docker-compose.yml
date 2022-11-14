@@ -1,0 +1,10 @@
+version: "3"
+services:
+  scraper-service: 
+    environment:
+      - URL=""
+    ports: 
+      - 8080:8080
+  prometheus-service:
+    ports: 
+      - 9095:9095
