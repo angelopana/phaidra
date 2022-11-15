@@ -2,7 +2,9 @@
 
 
 # Build our microservice
-FROM golang:latest-alpine
-WORKDIR /app
+FROM golang:1.19-alpine
+WORKDIR /go/src
 COPY . .
-RUN go mod download
+EXPOSE 9095
+RUN go mod download 
+CMD ["go build go/src/app/main.go", "go run /go/src/app/main.go"]
