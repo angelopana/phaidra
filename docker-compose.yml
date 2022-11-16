@@ -1,14 +1,8 @@
 version: "3.2"
 services:
-  web-service: 
-    container_name: web-service
-    image: golang:1.19-alpine
+  scraper-service: 
+    container_name: scraper-service
+    image: phaidra
     ports: 
       - 8080:8080
-  prometheus-service:
-    image: prom/prometheus:latest
-    container_name: prometheus
-    ports: 
       - 9095:9095
-    depends_on: 
-      - web-service

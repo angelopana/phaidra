@@ -19,6 +19,5 @@ func InitPrometheusMetrics() *Metrics {
 
 	// create metric counter
 	m.Counter = counter
-	// prometheus.MustRegister(m.Counter)
 	return &m
 }
